@@ -1,3 +1,4 @@
+
 # CryptoAnalyzer
 Harleen Sandhu
 This project is a Python-based cryptocurrency analysis tool that allows users to fetch, analyze, and visualize historical price data alongside public sentiment. Using a graphical user interface built with Tkinter, users can select a cryptocurrency, define a date range, and view detailed charts of price trends, moving averages, and volatility. The application integrates real-time Reddit data and performs sentiment analysis using VADER to examine the relationship between market sentiment and price behavior. The backend is designed using object oriented programming principles for modularity, readability, and reusability. This tool demonstrates the integration of financial data analytics, as well as some machine learning topics to give better analysis of the state of cryptocurrencies and how public opinion plays a role. 
@@ -34,4 +35,5 @@ The project collects Bitcoin price data using the CoinGecko API and cryptocurren
 
 DATA ANALYSIS:
 The DataAnalyzer class computes daily returns, moving averages, and rolling volatility from the price data. It also processes Reddit sentiment data using VADER to extract compound sentiment scores, grouping them by date. The final merged dataset is used for trend visualization through the Visualizer class, which plots price over time, moving averages, and volatility. Sentiment is summarized numerically for the selected time period and displayed in the UI. Visualization is handled with matplotlib to produce clear, labeled charts on demand.
+
 
