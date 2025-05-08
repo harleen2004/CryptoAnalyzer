@@ -46,9 +46,5 @@ class CryptoData:
 
     def save_to_csv(self, filename):
         self.df.to_csv(filename, index=False)
-        
-#btc = CryptoData("bitcoin", "2024-10-01", "2024-12-31")
-#df = btc.fetch_data()
-#print(df.head())
 
 
