@@ -27,13 +27,38 @@ A button to fetch and analyze data for Bitcoin.
 Output areas for average sentiment and technical metric summaries.
 
 Buttons to display different plots using the Visualizer module.
-
-At least four widgets including input fields, buttons, and labels across two windows.
-
 DATA COLLECTION:
 The project collects Bitcoin price data using the CoinGecko API and cryptocurrency-related posts from Reddit using the PRAW library. The collected data is stored locally in the data/ directory. Merged and filtered datasets are saved as CSV files using built-in pandas methods, and the DataAnalyzer class handles all saving to ensure modularity. All API access is rate-limited and adheres to public access guidelines. The data is structured with timestamped price entries and grouped sentiment scores, prepared for time-series analysis.
 
 DATA ANALYSIS:
 The DataAnalyzer class computes daily returns, moving averages, and rolling volatility from the price data. It also processes Reddit sentiment data using VADER to extract compound sentiment scores, grouping them by date. The final merged dataset is used for trend visualization through the Visualizer class, which plots price over time, moving averages, and volatility. Sentiment is summarized numerically for the selected time period and displayed in the UI. Visualization is handled with matplotlib to produce clear, labeled charts on demand.
+
+### Home Page
+- Input fields for cryptocurrency and date range
+- Date selection via calendar widget (`tkcalendar`)
+- Button to initiate full analysis
+
+### Dashboard Page
+- Price trend visualization (with moving average)
+- Volatility over time
+- Summary of sentiment scores
+- Lists of top positive and negative Reddit posts during the selected period
+
+---
+
+## 🛠 Installation Instructions
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/your-username/CryptoAnalyzer.git
+   cd CryptoAnalyzer
+2. **Download Required Packages**:
+   run this in terminal:
+   pip install customtkinter tkcalendar matplotlib pandas 
+   requests openai praw nltk
+   also run this:
+   python -m nltk.downloader vader_lexicon
+4. **Running Application**:
+   python gui/gui.py
 
 
